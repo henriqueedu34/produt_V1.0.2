@@ -1,0 +1,30 @@
+package com.Stock.produt.item;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+@Entity
+@Data
+public class Item {
+    @Id
+    @GeneratedValue
+    private long id;
+
+    @Column(unique = true)
+    private String name;
+
+    @Column(name = "\"value\"")
+    private BigDecimal value;
+
+    private LocalDate expirationDate;
+
+    private LocalDate localDate;
+
+    @PrePersist
+    public void prePersist() {
+        this.localDate = LocalDate.now();
+    }
+}
