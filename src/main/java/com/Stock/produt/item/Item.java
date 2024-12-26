@@ -19,6 +19,7 @@ public class Item {
     @Column(name = "\"value\"")
     private BigDecimal value;
 
+    @Column(name = "Data_validade")
     private LocalDate expirationDate;
 
     private LocalDate localDate;
