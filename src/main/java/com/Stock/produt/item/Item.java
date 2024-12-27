@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
+@Table(name = "ITENS")
 public class Item {
     @Id
     @GeneratedValue
