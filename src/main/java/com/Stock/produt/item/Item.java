@@ -14,7 +14,7 @@ public class Item {
     @GeneratedValue
     private long id;
 
-    @Column(unique = true)
+    @Column(unique = true, name = "Name_produt")
     private String name;
 
     @Column(name = "\"value\"")
